@@ -1157,12 +1157,12 @@ def render():
         user_dict = dict(user) if user else {}
 
         profile = {
-            "age": int(user_dict.get("age", 30)) if user_dict else 30,
-            "bmi": float(user_dict.get("bmi", 22.0)) if user_dict else 22.0,
-            "bmi_status": str(user_dict.get("bmi_status", "正常")) if user_dict else "正常",
-            "chronic_conditions": str(user_dict.get("chronic_conditions", "")) if user_dict else "",
-            "fitness_level": str(user_dict.get("fitness_level", "轻度运动")) if user_dict else "轻度运动",
-            "altitude_experience": str(user_dict.get("altitude_experience", "无")) if user_dict else "无",
+            "age": int(user_dict.get("age") or 30) if user_dict else 30,
+            "bmi": float(user_dict.get("bmi") or 22.0) if user_dict else 22.0,
+            "bmi_status": str(user_dict.get("bmi_status") or "正常") if user_dict else "正常",
+            "chronic_conditions": str(user_dict.get("chronic_conditions") or "") if user_dict else "",
+            "fitness_level": str(user_dict.get("fitness_level") or "轻度运动") if user_dict else "轻度运动",
+            "altitude_experience": str(user_dict.get("altitude_experience") or "无") if user_dict else "无",
         }
 
         st.session_state.user_info = {
