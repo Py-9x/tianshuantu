@@ -76,9 +76,9 @@ def _brand_block(username):
         f"""
         <div style='{brand_style}'>
             <div>
-                <h2 style='margin:0; color:{title_color}; font-size:20px;'>☁️ 云陆卫士</h2>
+                <h2 style='margin:0; color:{title_color}; font-size:20px;'>⛰️ 天枢安途</h2>
                 <p style='margin:4px 0 0; color:rgba(200,200,200,0.6); font-size:12px;'>
-                    天枢安途 - 高原探险全周期生命智能监护平台
+                    高原探险全周期生命智能监护平台
                 </p>
             </div>
             <div style='text-align:right; color:{user_color}; font-size:12px;'>

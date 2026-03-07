@@ -10,7 +10,7 @@ cd D:\tianyashouwang\tianya_new_9
 
 git init
 git add .
-git remote add origin https://github.com/YOUR_USERNAME/tianya-skyguard.git
+git remote add origin https://github.com/YOUR_USERNAME/tianshuantu.git
 git branch -M main
 git commit -m "Initial commit"
 git push -u origin main
@@ -18,7 +18,7 @@ git push -u origin main
 
 **需要做什么**：
 1. 创建 GitHub 仓库：https://github.com/new
-2. 替换 `YOUR_USERNAME` 为你的 GitHub 用户名仓库名为 `tianya-skyguard`
+2. 替换 `YOUR_USERNAME` 为你的 GitHub 用户名仓库名为 `tianshuantu`
 3. 上面的命令执行完即可
 
 ### 第2步：Streamlit Cloud（3分钟）
@@ -26,7 +26,7 @@ git push -u origin main
 1. 登录 https://streamlit.io/cloud
 2. 点击 **"New app"**
 3. 选择：
-   - **Repository**: `YOUR_USERNAME/tianya-skyguard`
+   - **Repository**: `YOUR_USERNAME/tianshuantu`
    - **Main file path**: `streamlit_app.py`
    - **Branch**: `main`
 4. 点击 **"Deploy!"**

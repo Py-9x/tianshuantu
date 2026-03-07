@@ -1,6 +1,6 @@
 # 🚀 Streamlit Cloud 云原生部署指南
 
-> **项目**：云陆卫士 - 高原失能预防医学决策系统  
+> **项目**：天枢安途——高原探险全周期生命智能监护平台  
 > **目标**：完整云原生部署（数据库 + API + 模型都在云端）
 
 ---
@@ -26,8 +26,8 @@
 1. 登录 [github.com](https://github.com)
 2. 点击 **"+" → "New repository"**
 3. 配置：
-   - **Repository name**: `tianya-skyguard` 或 `cloud-altitude-guard`
-   - **Description**: `High-altitude failure prevention medical decision system | 高原失能预防医学决策系统`
+   - **Repository name**: `tianshuantu` 或 `tianya-intelligence-guide`
+   - **Description**: `Life intelligence monitoring platform for high-altitude exploration | 天枢安途——高原探险全周期生命智能监护平台`
    - **Visibility**: **Public** （Streamlit Cloud 免费版需要 public 仓库）
    - **Initialize repository**: 勾选 "Add a README.md"
 4. 点击 **"Create repository"**
@@ -59,7 +59,7 @@ cd D:\tianyashouwang\tianya_new_9
 git init
 
 # 添加remote
-git remote add origin https://github.com/YOUR_USERNAME/tianya-skyguard.git
+git remote add origin https://github.com/YOUR_USERNAME/tianshuantu.git
 
 # 添加所有文件
 git add .
@@ -89,7 +89,7 @@ git push -u origin main
 2. 点击 **"New app"**
 3. 选择：
    - **GitHub account**: 选择你的账户
-   - **Repository**: `YOUR_USERNAME/tianya-skyguard`
+   - **Repository**: `YOUR_USERNAME/tianshuantu`
    - **Branch**: `main`
    - **Main file path**: `streamlit_app.py`
 4. 点击 **"Deploy!"**
@@ -240,7 +240,7 @@ streamlit run streamlit_app.py
 
 ```bash
 # 部署到 Cloud 后访问：
-https://your-username-tianya-skyguard.streamlit.app/
+https://your-username-tianshuantu.streamlit.app/
 
 # 测试项目
 ✓ 登录功能
@@ -324,7 +324,7 @@ git push origin main
 ### 分享你的应用
 
 ```
-应用 URL：https://your-username-tianya-skyguard.streamlit.app/
+应用 URL：https://your-username-tianshuantu.streamlit.app/
 
 分享方式：
 - 复制链接发给测试人员
@@ -336,8 +336,8 @@ git push origin main
 
 对于中国大学生计算机设计大赛：
 ```
-作品链接：https://your-username-tianya-skyguard.streamlit.app/
-源代码：https://github.com/your-username/tianya-skyguard
+作品链接：https://your-username-tianshuantu.streamlit.app/
+源代码：https://github.com/your-username/tianshuantu
 演示视频：（可选，上传到 YouTube/Bilibili）
 ```
 
@@ -357,11 +357,11 @@ git push origin main
 
 **最终效果**：
 ```
-你的云陆卫士系统在线访问
+你的天枢安途系统在线访问
    ↓
 评委/用户点击链接
    ↓
-立即看到完整的高原失能预防系统演示
+立即看到完整的高原探险全周期生命智能监护平台演示
    ↓
 🏆 竞赛评分！
 ```
