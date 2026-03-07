@@ -1,0 +1,508 @@
+:root {
+  --bg: #0b1424;
+  --bg-gradient: linear-gradient(180deg, #0f1b30 0%, #15243e 46%, #122038 100%);
+  --card-bg: rgba(26, 40, 63, 0.78);
+  --card-border: rgba(124, 179, 255, 0.24);
+  --card-glow: 0 8px 30px rgba(67, 122, 214, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --text-main: #f5f9ff;
+  --text-sub: rgba(214, 227, 247, 0.92);
+  --text-muted: rgba(171, 193, 223, 0.78);
+  --line: rgba(124, 179, 255, 0.22);
+
+  --ok: #10B981;
+  --warn: #F59E0B;
+  --danger: #EF4444;
+  --primary: #00C6FF;
+  --primary-hover: #0083B0;
+  --accent-gradient: linear-gradient(135deg, #00B4DB 0%, #0083B0 50%, #00C6FF 100%);
+
+  --radius-card: 16px;
+  --radius-pill: 12px;
+  --shadow-card: var(--card-glow);
+}
+
+/* ===== Base ===== */
+.stApp {
+  background: var(--bg-gradient) !important;
+  background-attachment: fixed !important;
+  color: var(--text-main);
+  font-family: 'Avenir Next', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+.block-container {
+  padding-top: 2.4rem;
+  padding-bottom: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hide Streamlit chrome */
+#MainMenu {
+  visibility: hidden;
+}
+
+footer {
+  visibility: hidden;
+}
+
+header {
+  visibility: hidden;
+}
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-main) !important;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+}
+
+h2 {
+  font-size: 1.125rem !important;
+}
+
+h3 {
+  font-size: 1rem !important;
+}
+
+p,
+li,
+label,
+.stMarkdown,
+.stText {
+  color: var(--text-sub);
+}
+
+.text-main {
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+.text-sub {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.text-muted {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ===== Card System: Glassmorphism ===== */
+.custom-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 22px;
+  margin-bottom: 20px;
+  border: 1px solid var(--card-border);
+  transition: border-color 0.3s ease;
+}
+
+.custom-card:hover {
+  border-color: rgba(0, 198, 255, 0.25);
+}
+
+/* ===== Inputs: Dark with Cyan Focus ===== */
+.stTextInput>div>div>input,
+.stTextArea textarea,
+.stDateInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"]>div {
+  border: 1px solid rgba(124, 179, 255, 0.35) !important;
+  border-radius: 12px !important;
+  color: #f5f9ff !important;
+  background: rgba(23, 35, 55, 0.88) !important;
+  min-height: 46px !important;
+  padding: 10px 14px !important;
+  font-family: inherit !important;
+}
+
+.stTextInput>div>div>input:focus,
+.stTextArea textarea:focus,
+.stDateInput input:focus,
+.stNumberInput input:focus,
+.stSelectbox div[data-baseweb="select"]>div:focus-within {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.15), inset 0 0 6px rgba(0, 198, 255, 0.05) !important;
+}
+
+.stTextInput>div>div>input::placeholder,
+.stTextArea textarea::placeholder {
+  color: rgba(140, 180, 220, 0.5) !important;
+}
+
+/* ===== Buttons ===== */
+.stButton>button,
+.stDownloadButton>button {
+  border-radius: 14px !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(0, 198, 255, 0.3) !important;
+  color: var(--text-main) !important;
+  background: rgba(0, 198, 255, 0.08) !important;
+}
+
+.stButton>button:hover,
+.stDownloadButton>button:hover {
+  background: rgba(0, 198, 255, 0.18) !important;
+  border-color: rgba(0, 198, 255, 0.5) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(0, 198, 255, 0.12) !important;
+}
+
+/* Primary action */
+.stForm .stButton>button,
+.stFormSubmitButton>button,
+.stButton.primary>button {
+  background: var(--accent-gradient) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(0, 198, 255, 0.4) !important;
+  box-shadow: 0 8px 20px rgba(0, 130, 200, 0.2) !important;
+}
+
+.stForm .stButton>button:hover,
+.stFormSubmitButton>button:hover,
+.stButton.primary>button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(0, 180, 255, 0.3) !important;
+}
+
+/* ===== Checkbox ===== */
+.stCheckbox {
+  margin-top: 0.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.stCheckbox label,
+.stCheckbox span {
+  color: var(--text-sub) !important;
+}
+
+/* ===== Status LEDs ===== */
+.status-led,
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.dot-green {
+  background: var(--ok);
+}
+
+.dot-yellow {
+  background: var(--warn);
+}
+
+.dot-red {
+  background: var(--danger);
+}
+
+/* ===== Badges ===== */
+.badge-green {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #059669, #10B981);
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.25);
+}
+
+.badge-yellow {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #D97706, #F59E0B);
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.25);
+}
+
+.badge-red {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #DC2626, #EF4444);
+  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.25);
+}
+
+/* ===== Metric ===== */
+.metric-value {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+/* ===== Tables / Expanders ===== */
+.streamlit-expanderHeader {
+  color: var(--text-main) !important;
+}
+
+hr {
+  border-color: var(--line) !important;
+}
+
+/* ===== Captions ===== */
+[data-testid="stCaptionContainer"] {
+  color: var(--text-muted) !important;
+}
+
+/* ===== Alert refinements ===== */
+div[data-baseweb="notification"] {
+  border-radius: 12px !important;
+}
+
+/* ===== Sidebar: Dark ===== */
+[data-testid="stSidebar"] {
+  background: rgba(16, 27, 45, 0.96) !important;
+  border-right: 1px solid var(--line);
+  padding: 20px;
+}
+
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] .stMarkdown,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span {
+  color: var(--text-sub) !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  color: var(--text-main) !important;
+}
+
+/* ===== SOS fixed button ===== */
+.sos-fixed .stButton>button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 12px 28px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 25px rgba(185, 28, 28, 0.35), 0 0 15px rgba(239, 68, 68, 0.2) !important;
+}
+
+.sos-fixed .stButton>button:hover {
+  transform: scale(1.04) !important;
+  box-shadow: 0 12px 35px rgba(185, 28, 28, 0.5) !important;
+}
+
+/* ===== Brand blocks ===== */
+.brand-top {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.brand-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 12px 0 4px 0;
+}
+
+/* ===== Radio navigation (dark-friendly) ===== */
+.stRadio>div {
+  gap: 0.5rem;
+}
+
+.stRadio label {
+  color: var(--text-sub) !important;
+  transition: color 0.2s ease;
+}
+
+.stRadio label:hover {
+  color: var(--primary) !important;
+}
+
+/* ===== Selectbox dropdown ===== */
+div[data-baseweb="popover"] {
+  background: rgba(10, 18, 30, 0.95) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px !important;
+}
+
+div[data-baseweb="popover"] li {
+  color: var(--text-main) !important;
+}
+
+div[data-baseweb="popover"] li:hover {
+  background: rgba(0, 198, 255, 0.1) !important;
+}
+
+/* ===== Metric widget (Streamlit native) ===== */
+[data-testid="stMetricValue"] {
+  color: var(--primary) !important;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--text-sub) !important;
+}
+
+/* ===== Tab styling ===== */
+.stTabs [data-baseweb="tab-list"] {
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+
+.stTabs [data-baseweb="tab"] {
+  color: var(--text-sub) !important;
+}
+
+.stTabs [aria-selected="true"] {
+  color: var(--primary) !important;
+  border-bottom-color: var(--primary) !important;
+}
+
+/* ===== Mobile adjustments ===== */
+@media (max-width: 640px) {
+  .block-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .custom-card {
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: 1.25rem !important;
+  }
+
+  h2 {
+    font-size: 1.05rem !important;
+  }
+
+  p,
+  li,
+  label {
+    font-size: 14px !important;
+  }
+
+  .metric-value {
+    font-size: 30px;
+  }
+
+  .stButton>button,
+  .stDownloadButton>button {
+    width: 100%;
+  }
+
+  .sos-fixed .stButton>button {
+    right: 5%;
+    width: 90%;
+    bottom: 16px;
+  }
+}
+
+/* ===== Selectbox / Dropdown: force dark ===== */
+/* BaseWeb popover layer */
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+[data-baseweb="select"] [data-baseweb="menu"],
+ul[data-baseweb="menu"],
+[role="listbox"] {
+  background: rgba(8, 15, 28, 0.97) !important;
+  border: 1px solid rgba(0, 198, 255, 0.18) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+/* Dropdown list items */
+[data-baseweb="popover"] li,
+[data-baseweb="menu"] li,
+[role="listbox"] li,
+[data-baseweb="option"],
+[role="option"] {
+  background: transparent !important;
+  color: var(--text-sub) !important;
+}
+
+/* Hovered / selected option */
+[data-baseweb="option"]:hover,
+[role="option"]:hover,
+[data-baseweb="option"][aria-selected="true"],
+[role="option"][aria-selected="true"] {
+  background: rgba(0, 198, 255, 0.12) !important;
+  color: var(--primary) !important;
+}
+
+/* Active / focused option */
+[data-baseweb="option"]:focus,
+[role="option"]:focus {
+  background: rgba(0, 198, 255, 0.08) !important;
+}
+
+/* Streamlit stSelectbox inner div that shows selected value */
+.stSelectbox [data-baseweb="select"]>div:first-child {
+  background: rgba(10, 15, 25, 0.85) !important;
+  border-color: rgba(0, 198, 255, 0.15) !important;
+  color: var(--text-main) !important;
+}
+
+/* Dropdowns arrow icon  */
+[data-baseweb="select"] svg {
+  fill: var(--text-sub) !important;
+}
+
+/* Any stray white modal/overlay backgrounds */
+[data-baseweb="toast-container"],
+[data-baseweb="layer"]>div {
+  background: transparent !important;
+}
+
+/* Streamlit info / warning / error boxes */
+.stAlert {
+  background: rgba(10, 18, 30, 0.8) !important;
+  border-radius: 12px !important;
+  border-color: rgba(0, 198, 255, 0.15) !important;
+  color: var(--text-main) !important;
+}
+
+/* Spinner */
+.stSpinner>div {
+  border-top-color: var(--primary) !important;
+}
+
+/* Expander arrow & header */
+.streamlit-expanderHeader {
+  background: rgba(10, 18, 30, 0.6) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+.streamlit-expanderContent {
+  background: rgba(10, 18, 30, 0.4) !important;
+  border: 1px solid var(--card-border) !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px !important;
+}
