@@ -1167,11 +1167,11 @@ def render():
 
         st.session_state.user_info = {
             "user_id": user_id,
-            "name": str(user_dict.get("name", "未知干员")) if user_dict else "未知干员",
-            "age": int(user_dict.get("age", 0)) if user_dict else 0,
-            "sex": str(user_dict.get("sex", "未知")) if user_dict else "未知",
-            "blood_type": str(user_dict.get("blood_type", "N/A")) if user_dict else "N/A",
-            "emergency_contact": str(user_dict.get("emergency_contact", "未预设")) if user_dict else "未预设",
+            "name": str(user_dict.get("name") or "未知干员") if user_dict else "未知干员",
+            "age": int(user_dict.get("age") or 0) if user_dict else 0,
+            "sex": str(user_dict.get("sex") or "未知") if user_dict else "未知",
+            "blood_type": str(user_dict.get("blood_type") or "N/A") if user_dict else "N/A",
+            "emergency_contact": str(user_dict.get("emergency_contact") or "未预设") if user_dict else "未预设",
             "chronic_conditions": profile["chronic_conditions"],
             "bmi": profile["bmi"],
             "fitness_level": profile["fitness_level"]
