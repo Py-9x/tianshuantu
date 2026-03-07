@@ -61,7 +61,7 @@ def _brand_block(username):
 
 
 st.set_page_config(
-    page_title="天涯守望 - 智能生命保障系统",
+    page_title="天枢安途 - 高原探险全周期生命智能监护平台",
     page_icon="🛰️",
     layout="wide",
     initial_sidebar_state="collapsed",

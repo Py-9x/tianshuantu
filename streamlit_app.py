@@ -78,7 +78,7 @@ def _brand_block(username):
             <div>
                 <h2 style='margin:0; color:{title_color}; font-size:20px;'>☁️ 云陆卫士</h2>
                 <p style='margin:4px 0 0; color:rgba(200,200,200,0.6); font-size:12px;'>
-                    高原失能预防医学决策系统
+                    天枢安途 - 高原探险全周期生命智能监护平台
                 </p>
             </div>
             <div style='text-align:right; color:{user_color}; font-size:12px;'>
@@ -148,7 +148,7 @@ def main():
 if __name__ == "__main__":
     # 设置页面配置
     st.set_page_config(
-        page_title="云陆卫士 - 高原失能预防系统",
+        page_title="天枢安途 - 高原探险全周期生命智能监护平台",
         page_icon="⛰️",
         layout="wide",
         initial_sidebar_state="expanded"
