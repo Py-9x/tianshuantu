@@ -98,7 +98,7 @@ class AIService:
         for attempt in range(1, 4):
             try:
                 response = self.client.chat.completions.create(
-                    model="ernie-5.0",
+                    model="ernie-5.0-thinking-preview",
                     messages=[
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt},

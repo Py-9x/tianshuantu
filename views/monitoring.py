@@ -725,7 +725,7 @@ class VitalsChart:
                 "padding:16px;border:1px solid rgba(0,198,255,0.1);'>",
                 unsafe_allow_html=True
             )
-            st.line_chart(chart_df, use_container_width=True, height=350)
+            st.line_chart(chart_df, width='stretch', height=350)
             st.markdown("</div>", unsafe_allow_html=True)
             st.caption("⚠️ Plotly 未安装，显示简化图表。")
             return
@@ -974,7 +974,7 @@ class VitalsChart:
                 xanchor='center',
             )
 
-        st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+        st.plotly_chart(fig, width='stretch', config={'displayModeBar': False})
 
 
 # 使用说明：
